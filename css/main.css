@@ -34,7 +34,7 @@ body {
 p:not(#tablep){
   line-height: 1.5;
   margin: 30px 0;
-  text-align: justify;
+  text-align: left;
 }
 
 #tablep {
