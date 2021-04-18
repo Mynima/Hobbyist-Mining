@@ -7,8 +7,10 @@
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
-  <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script> 
-  <script src="{{ 'js/hsc.js' | relative_url }}"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>  -->
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>   
+  <script src="{{ 'js/hsc_rate.js' | relative_url }}"></script>
 
   {% if page.subtitle %}
   <meta name="description" content="{{ page.subtitle }}">

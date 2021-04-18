@@ -1,0 +1,114 @@
+---
+layout: page_hsc2
+title: Hodl, Sell or Consolidate
+subtitle: Results based on DYOR
+use-site-title: true
+---
+<!---Page1: This include simple input for HSC categories with button to get results--->
+
+<h1>HSC Results:</h1>
+<div id="results_fields">
+    <table id="hsc_score_table">
+        <thead>
+            <tr><th colspan="4">Final Scores</th></tr>
+            <tr>
+                <th>Section</th>
+                <th>Hodl Score</th>
+                <th>Unclear Score</th>
+                <th>Sell/Consolidate Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="Title_1"></td>
+                <td id="hodl_1_score"></td>
+                <td id="unclear_1_score"></td>
+                <td id="sell_1_score"></td>
+            </tr>
+            <tr>
+                <td id="Title_2"></td>
+                <td id="hodl_2_score"></td>
+                <td id="unclear_2_score"></td>
+                <td id="sell_2_score"></td>
+            </tr>
+            <tr>
+                <td id="Title_3"></td>
+                <td id="hodl_3_score"></td>
+                <td id="unclear_3_score"></td>
+                <td id="sell_3_score"></td>
+            </tr>
+            <tr>
+                <td id="Title_4"></td>
+                <td id="hodl_4_score"></td>
+                <td id="unclear_4_score"></td>
+                <td id="sell_4_score"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="overall_plot" style="width: 750px; height: 750px; display: block; margin-left: auto; margin-right: auto;">
+    <script>
+        anychart.onDocumentReady(function () {
+        var chart = anychart.radar();
+        // set chart yScale settings
+        chart.yScale()
+        .minimum(0)
+        .maximum(100)
+        .ticks({'interval':20});
+    
+        // color alternating cells
+        chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
+    
+        // create first series
+        chart.area(all_scores()).name('Combined').markers(true).fill("#404E4D", 0.3).stroke("#404E4D")
+    
+        // set chart title
+        chart.title("HSC (Combined Scores)")
+            // set legend
+            .legend(true);
+    
+        // set container id for the chart
+        chart.container('overall_plot');
+        // initiate chart drawing
+        chart.draw();
+    
+        });
+    </script>
+</div>
+
+<div id="individual_plot" style="width: 750px; height: 750px; display: block; margin-left: auto; margin-right: auto;">
+    <script>
+        anychart.onDocumentReady(function () {
+            var chart = anychart.radar();
+            // set chart yScale settings
+            chart.yScale()
+            .minimum(0)
+            .maximum(100)
+            .ticks({'interval':20});
+    
+            // color alternating cells
+            chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
+    
+            // create first series
+            chart.area(plot_scores("Num1","Num2","Num3")).name('Community/Development').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+            // create second series
+            chart.area(plot_scores("Num4","Num5","Num6")).name('Track Record').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
+            // create third series
+            chart.area(plot_scores("Num7","Num8","Num9")).name('Cost/Value').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
+            // create forth series
+            chart.area(plot_scores("Num10","Num11","Num12")).name('Active Participation').markers(true).fill("#FDE74C", 0.3).stroke("#FDE74C")
+    
+            // set chart title
+            chart.title("HSC (Individual Scores)")
+            // set legend
+            .legend(true);
+    
+            // set container id for the chart
+            chart.container('individual_plot');
+            // initiate chart drawing
+            chart.draw();
+    
+        });
+    </script>
+</div>

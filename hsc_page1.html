@@ -1,0 +1,293 @@
+---
+layout: page
+title: Hodl, Sell or Consolidate
+subtitle: Rating System based on DYOR
+use-site-title: true
+---
+<!---Page1: This include simple input for HSC categories with button to get results--->
+
+<h1>HSC Scoring:</h1>
+<form  onSubmit="tosubmit();" id="hsc_scores">
+    <table>
+
+        <!--Community/Development Section-->
+        <thead>
+            <tr><th colspan="4">Community/Development</th></tr>
+            <tr>
+                <th>Section</th>
+                <th>Key Question(s)</th>
+                <th>Resources</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+
+        <tbody >
+            <tr>
+                <td id="tablep">Social Media</td>
+                <td id="tablep">How active is the community online? Are people talking about the Project? Is it quality content?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin#social">CoinGecko Social Summary</a></p>
+                    <p id="tablep">Social Channels: Discord, Telegram, Reddit, Twitter, Facebook etc.
+                </td>
+                <td id="tablep">
+                    <input required id="field1_1" type="number" min=1 max=5 name="social">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Search Trends</td>
+                <td id="tablep">Are others researching the project and where/when is most of the activity?</td>
+                <td id="tablep"><p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://trends.google.com/trends/explore?q=Bitcoin">Google Trends</a></p></td>
+                <td id="tablep">
+                    <input required id="field1_2" type="number" min=1 max=5 name="trends">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Industrial Rating</td>
+                <td id="tablep">What does an independent review think of the technology on the project and adoption?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://weisscrypto.com/en/crypto/btc/summary">Weiss Crypto Rating</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.tokeninsight.com/tokenDetail?cid=2365">Token Insight</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://cryptorank.io/price/bitcoin">Crypto Ranking</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field1_3" type="number" min=1 max=5 name="industrial">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Development</td>
+                <td id="tablep">How active is the project team’s development?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin#developer">CoinGecko Development Summary</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field1_4" type="number" min=1 max=5 name="development">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Global Messages</td>
+                <td id="tablep">How engaged is the project team with the community and what is the content of the current messages?</td>
+                <td id="tablep">
+                    <p id="tablep">Project Website, Whitepaper, Press Releases etc.</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field1_5" type="number" min=1 max=5 name="message">
+                </td>
+            </tr>            
+        </tbody>
+
+        <!--Track Record Section-->
+        <thead>
+            <tr><th colspan="4">Track Record</th></tr>
+            <tr>
+                <th>Section</th>
+                <th>Key Question(s)</th>
+                <th>Resources</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+
+        <tbody >
+            <tr>
+                <td id="tablep">Road-map Achievements</td>
+                <td id="tablep">What are the long-term goals of the project and have the team achieved (on target) previous goals?</td>
+                <td id="tablep">
+                    <p id="tablep">Project Website, Whitepaper, Press Releases etc.</p>
+                    <p id="tablep">News and Blogs Site:  Publish0x, FX Street, Medium etc.</p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin#news">CoinGecko News Summary</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field2_1" type="number" min=1 max=5 name="roadmap">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Market Cap/Price Growth</td>
+                <td id="tablep">What is the current market position of the project and in which direction does it seem to be moving?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin">CoinGecko Project Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.tokeninsight.com/tokenDetail?cid=2365">Token Insight</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://uk.tradingview.com/symbols/BTCUSD/?exchange=COINBASE">Trading View Charts</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field2_2" type="number" min=1 max=5 name="growth">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">User Base</td>
+                <td id="tablep">Does the project have a core app and, if so, how many users/downloads do they have?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.apptrace.com/ ">AppTrace</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field2_3" type="number" min=1 max=5 name="users">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Partnerships</td>
+                <td id="tablep">With whom have the project team forged strategic partnerships and is this list growing?</td>
+                <td id="tablep">
+                    <p id="tablep">Project Website, Whitepaper, Press Releases etc.</p>
+                    <p id="tablep">News and Blogs Site:  Publish0x, FX Street, Medium etc.</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field2_4" type="number" min=1 max=5 name="development">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Project Team</td>
+                <td id="tablep">Who makes up the project team, what are their roles/background and is it well rounded?</td>
+                <td id="tablep">
+                    <p id="tablep">Project Website, Whitepaper, Press Releases etc.</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field2_5" type="number" min=1 max=5 name="message">
+                </td>
+            </tr>            
+        </tbody>
+
+        <!--Cost/Value Section-->
+        <thead>
+            <tr><th colspan="4">Cost/Value</th></tr>
+            <tr>
+                <th>Section</th>
+                <th>Key Question(s)</th>
+                <th>Resources</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+
+        <tbody >
+            <tr>
+                <td id="tablep">Investment Rating</td>
+                <td id="tablep">How do experts assess the project from an investment standpoint, where are the strengths and weaknesses?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://weisscrypto.com/en/crypto/btc/summary">Weiss Crypto Ratings</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field3_1" type="number" min=1 max=5 name="investment">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Available Exchanges and Trading Volume</td>
+                <td id="tablep">What is the trading volume like, what are the top trading pairs, are the listed exchanges recognizable and reputable?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin">CoinGecko Project Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://app.intotheblock.com/coin/BTC">InToTheBlock Summary</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field3_2" type="number" min=1 max=5 name="trading">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Associated costs/value</td>
+                <td id="tablep">If there was an ICO how has it performed? Additionally, how do trading/swapping/withdrawal costs look?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://app.intotheblock.com/coin/BTC">InToTheBlock Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://icodrops.com/">ICO Drops</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field3_3" type="number" min=1 max=5 name="costs">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Chain analysis and Bitcoin Correlation</td>
+                <td id="tablep">How active is the network and how correlated is the project with Bitcoin?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://app.intotheblock.com/coin/BTC">InToTheBlock Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://cryptorank.io/price/bitcoin/on-chain-activity">Crypto Ranking On-Chain Activity Analytics</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field3_4" type="number" min=1 max=5 name="correlation">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Historic price Action/ Trends/ Indicators</td>
+                <td id="tablep">What is the recent market sentiment, and potentially market direction, like?</td>
+                <td id="tablep">
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://www.coingecko.com/en/coins/bitcoin">CoinGecko Project Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://weisscrypto.com/en/crypto/btc/summary">Weiss Crypto Ratings</a></p>
+                    <p id="tablep">News and Blogs Site:  Publish0x, FX Street, Medium etc.</p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://app.intotheblock.com/coin/BTC">InToTheBlock Summary</a></p>
+                    <p id="tablep"><a target="_blank" rel="noopener noreferrer" href="https://coinmarketcal.com/en/">CoinMarketCalendar</a></p>
+                </td>
+                <td id="tablep">
+                    <input required id="field3_5" type="number" min=1 max=5 name="history">
+                </td>
+            </tr>            
+        </tbody>
+
+        <!--Active Participation Section-->
+        <thead>
+            <tr><th colspan="4">Active Participation</th></tr>
+            <tr>
+                <th>Section</th>
+                <th>Key Question(s)</th>
+                <th>Resources</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+
+        <tbody >
+            <tr>
+                <td id="tablep">Holdings</td>
+                <td id="tablep">Do you already hold some of these coins/tokens, how does it look relative to your total holdings?</td>
+                <td id="tablep">
+                    <p id="tablep">Your Wallets</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field4_1" type="number" min=1 max=5 name="holdings">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Earnings</td>
+                <td id="tablep">Are there currently any ways that you could earn more on your investment for this coin (out with trading)?</td>
+                <td id="tablep">
+                    <p id="tablep">Staking</p>
+                    <p id="tablep">Passive interest earnings</p>
+                    <p id="tablep">Farming Tokens</p>
+                    <p id="tablep">Providing Liquidity</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field4_2" type="number" min=1 max=5 name="earn">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Usuage</td>
+                <td id="tablep">Are you currently actively, or do you plan, using the coin/token for their purpose? Or is it just speculative?</td>
+                <td id="tablep">
+                    <p id="tablep">Buying/swapping for gift cards</p>
+                    <p id="tablep">Convert to Fiat and Spend via Card</p>
+                    <p id="tablep">Governance</p>
+                    <p id="tablep">Discounted trading fees</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field4_3" type="number" min=1 max=5 name="use">
+                </td>
+            </tr>
+            <tr>
+                <td id="tablep">Opinions</td>
+                <td id="tablep">Based on the response to all the previous questions what is your opinion about the project?</td>
+                <td id="tablep">
+                    <p id="tablep">What does your gut tell you</p>
+                </td>
+                <td id="tablep">
+                    <input required id="field4_4" type="number" min=1 max=5 name="opinion">
+                </td>
+            </tr>          
+        </tbody>
+    </table>
+
+
+    <!--Button to go to the results page and derive/present Scores-->
+    <button Type="submit">Get Score Results</button>
+
+    <!--Derive ans store Scores-->
+    <script type="text/javascript">
+        $("#score_fields").on("submit",function(e){
+            e.preventDefault(e);
+        })
+    </script>
+
+</form>
+
+    
+
